@@ -1,0 +1,27 @@
+<html>
+     <head>
+        <title> Exercise 1: Password Validator </title>
+     </head>
+     <body>
+        <label for="password1">Create a password:</label>
+        <input type="text" id="password1" name="password1">
+        
+        <label for="password2">Confirm your password:</label>
+        <input type="text" id="password2" name="password2">
+        
+        <button type="button" onclick="validate()">Validate</button>
+        <script>
+            function validate(){
+                var password1 = document.getElementById("password1");
+                var password2 = document.getElementById("password2");
+                if(password1.value != password2.value){
+                    alert("the passwords don't match");
+                }else if(password1.value.length < 8){
+                    alert("the passwords are not at least 8 characters in length");
+                }else{
+                    alert("the passwords have been validated");
+                }
+            }
+        </script>
+     </body>
+</html>

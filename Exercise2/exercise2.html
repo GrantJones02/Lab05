@@ -1,0 +1,30 @@
+<html>
+     <head>
+        <title> Exercise 2: Slide show! </title>
+     </head>
+     <body>
+        <button type="button" onclick="previous()">Previous</button>
+        <img src="1" id="image" width="300" height="200">
+        <button type="button" onclick="next()">Next</button>
+        <script>
+            var current = 0;
+            let images = ["1", "2", "3", "4", "5"];
+            function next(){
+                if(current == 4){
+                    current = 0;
+                }else{
+                    current ++;
+                }
+                document.getElementById("image").src = images[current];
+            }
+            function previous(){
+            if(current == 0){
+                    current = 4;
+                }else{
+                    current --;
+                }
+                document.getElementById("image").src = images[current];
+            }
+        </script>
+     </body>
+</html>

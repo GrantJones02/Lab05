@@ -1,0 +1,58 @@
+<html>
+     <head>
+     <link href="exercise4.css"
+        rel="stylesheet"
+        type="text/css"/>
+        <title> Exercise 4: CSS Manipulation </title>
+     </head>
+     <body>
+        <p class = "dummy" id = "dummy"> Hi, 
+        this is a dummy paragraph. I love HTML and CSS. It's just
+        so much fun. I could do this for the rest of my life. Oh wait, I'm 
+        an EECS major, so I might just. That sounds lovely. I must go call
+        my parents to tell them the amazing news. See you later. </p>
+        
+        <p> P.S. You can put the following values in the border text box "red",
+         "green", "blue", or a number to make the width to change the border 
+         around the dummy paragraph. You can also put "red", "green", or "blue" 
+         in the background text box to change the background of the dummy 
+         paragraph. </p>
+        
+        <label for="border">Border:</label>
+        <input type="text" id="border" name="border">
+        
+        <label for="background">Background:</label>
+        <input type="text" id="background" name="background">
+        
+        <button type="button" onclick="colorChange()">Change Colors</button>
+        <script>
+            function colorChange(){
+                var border = document.getElementById("border");
+                var background = document.getElementById("background");
+                
+                var dummy = document.getElementById("dummy");
+                if(border.value == "red"){
+                    dummy.style.borderColor = "red"
+                }else if(border.value == "green"){
+                    dummy.style.borderColor = "green"
+                }else if(border.value == "blue"){
+                    dummy.style.borderColor = "blue"
+                }else if(border.value >= 0){
+                    dummy.style.borderWidth = border.value
+                }else{
+                    alert("the input for the border is invalid");
+                }
+                
+                if(background.value == "red"){
+                    dummy.style.backgroundColor = "red"
+                }else if(background.value == "green"){
+                    dummy.style.backgroundColor = "green"
+                }else if(background.value == "blue"){
+                    dummy.style.backgroundColor = "blue"
+                }else{
+                    alert("the input for the background is invalid");
+                }
+            }
+        </script>
+     </body>
+</html>

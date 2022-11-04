@@ -1,0 +1,29 @@
+p
+{
+ background-color: red; color: white;
+ font-family: arial font-size: 22pt;
+}
+
+p.links
+{
+ background-color: blue; color: white;
+ font-family: arial font-size: 22pt;
+}
+
+body
+{
+ background-image: url(2); background-size: 100%;
+ background-repeat: no-repeat; background-attachment: fixed;
+}
+
+a
+{
+ background-color: blue;
+ color: red;
+}
+
+a:hover
+{
+ background-color: red;
+ color: blue
+}
